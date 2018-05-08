@@ -1,10 +1,10 @@
-##**Dissection of leaf angle variation in maize through genetic mapping and meta-analysis**
+## **Dissection of leaf angle variation in maize through genetic mapping and meta-analysis**
 
 Matthew J. Dzievit, Xianran Li, Jianming Yu
 
 
 
-###Organization of folders
+### Organization of folders
 
 1. Processing of genotypic data
 2. Processing of phenotypic data
