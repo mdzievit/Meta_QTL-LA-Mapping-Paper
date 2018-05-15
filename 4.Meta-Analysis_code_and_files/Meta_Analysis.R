@@ -1,0 +1,370 @@
+library(sensitivitymv)
+library(tidyverse)
+library(survcomp)
+library(grid)
+library(gridExtra)
+##Analysis done with RefGen V3
+
+print(sessionInfo())
+
+######Determine Total Genomic Bins in genome #######
+##Sets the genomic bin size for the meta-analysis
+####And sets the value to convert LRT to chi sq and the number of df used to
+####convert to p-values
+bins <- 10000000
+two_loge10 <- (2*log(10))
+df <- 1
+
+##Reads in the chr lengths and calculates total bins per chr
+chrLengths <- read_tsv("RefGenV3_Chr_Lengths.txt") %>%
+  mutate(Bins = (Length %/% bins) + 1)
+
+##Calculates the total number of genomic bins for the genome and reports it back
+totalBinNum <- chrLengths %>%
+  summarise(Total = sum(Bins)) %>%
+  pull(Total)
+
+
+##This expands out the total possible bins so I can get a row_order for
+##all the bins. This allows me to plot them in physical position 
+##on the x-axis. I also added an extra bin to the end of each chromosome
+##This is purely for plotting purposes so I can have the dotted gray line separate chromosomes
+##and not overlap with a bin that might be at the end of a chromosome.
+total_bins <- data.frame(Chr = numeric(0),
+                            Bin = numeric(0))
+bin_num <- chrLengths %>%
+  pull(Bins)
+for (i in 1:10) {
+  for (j in 1:(bin_num[i] + 1)) {
+    total_bins <- total_bins %>%
+      add_row(Chr = i,
+              Bin = j)
+  }
+}
+
+############Run the meta-analysis ########
+##Reads the QTL information
+data <- read_delim("snps_pvalues_final_version.txt",
+                   delim = "\t")
+
+####Assigns the QTL to a genomic bin and ranks the p_value by QTL study and
+####canopy level the QTL was detected in so we can remove redundant QTLs
+data_bin <- data %>%
+  arrange(Chr,Start,End) %>%
+  mutate(Midpoint = (Start + End)/2,
+         Bin = (Midpoint %/% bins) + 1,
+         p_value = case_when(
+           !is.na(LOD) & is.na(p_value) ~ dchisq((LOD * two_loge10),df),
+           !is.na(LRT) & is.na(p_value) ~ dchisq(LRT,df),
+           TRUE ~ p_value)) %>%
+  arrange(Chr,Midpoint) %>%
+  ungroup() %>%
+  group_by(SourceID,Chr,Bin) %>%
+  mutate(pvalue_rank = rank(p_value, ties.method = "first")) %>%
+  ungroup() %>%
+  arrange(SourceID,Chr,Bin) %>% 
+  select(-LRT,-LOD)
+
+##This filters the data and pulls the top ranked QTL for each group set before
+data_bin_filtered <- data_bin %>%
+  filter(pvalue_rank == 1)
+
+##Report the number of QTL detected from QTL and Joint LInkage mapping
+(total_QTL <- data_bin %>%
+  filter(Method %in% c("QTL_Mapping","Joint_Linkage")) %>%
+  summarise(n = n()) %>% 
+  pull(n))
+
+##Report the number of non-redudant QTL detected
+(nonRed_QTL <- dim(data_bin_filtered)[1])
+
+##Report as percentage
+nonRed_QTL / total_QTL
+
+
+#Summarizes how many bins all the unique QTL map into
+number_per_bin <- data_bin %>%
+  filter(pvalue_rank == 1) %>%
+  group_by(Chr,Bin) %>%
+  summarise(n = n())
+##How many bins do all the QTL map into
+dim(number_per_bin)[1]
+
+##Calculation of threshold p-value/LOD score
+##Starting value was LOD 3.0 per Lander and Botstein, LOD 3 equates to alpha 0.05,
+##so we doubled that to reduce false positives
+##Then we divided by the number of bins we are testing (Bonferronni Correction)
+##Converts LOD score (3.0 x 2) to a p-value to adjust for Bonferroni
+cutoff <- ((pchisq((two_loge10 * 3.0),1,lower.tail = FALSE) / 2) *
+  (pchisq((two_loge10 * 3.0),1,lower.tail = FALSE) / 2)) /
+  dim(data_bin_filtered %>% 
+        select(Chr,Bin) %>% 
+        unique())[1]
+##This converts the calculated p-value threshold back to a LOD score
+lod_cutoff <- (qchisq(cutoff,1,lower.tail = FALSE,log.p = FALSE)) / two_loge10
+
+##Read the candidate gene information and assign them to bins
+candGenes <- read_delim("Candidate_Genes_v3.txt",
+                        delim = "\t")
+candGenes <- candGenes %>%
+  mutate(Midpoint = (Start + End)/2,
+         SourceID = "Cand") %>%
+  group_by(Chr) %>%
+  mutate(Bin = (Midpoint %/% bins) + 1)
+
+
+##This runs the grouped_pvale as described in the paper
+data_bin_pvalue_z <- data_bin %>%
+  filter(pvalue_rank == 1) %>%
+         #Method == "QTL_Mapping") %>%
+  group_by(Chr,Bin) %>%
+  summarise(Grouped_pvalue = combine.test(p = p_value, w = sample_size, method = "logit",
+                                          hetero = FALSE, na.rm = TRUE),
+            n = n()) %>%
+  mutate(Passed = Grouped_pvalue < cutoff,
+         Bin_Start = ((Bin-1)*bins/1000000),
+         Bin_End = (Bin * bins)/1000000) %>%
+  ungroup() %>%
+  mutate(Rnk = rank(Grouped_pvalue, ties.method = "first"),
+         Top_15 = ifelse(Rnk <= 15, "Yes","No"))
+
+
+##This joins the bins with candidate genes and then simply says whether there is a candidate
+##gene present in the bin. It is used for plotting purposes
+candGenes_formatted_z <- data_bin_pvalue_z %>%
+  select(Chr,Bin,Grouped_pvalue,Rnk,Passed) %>%
+  #filter(Passed) %>%
+  left_join(candGenes, by = c("Chr","Bin")) %>%
+  select(Chr,Bin,Maize_Gene_Name) %>%
+  group_by(Chr,Bin) %>%
+  mutate(Present = ifelse(!is.na(Maize_Gene_Name),1,0)) %>%
+  summarise(Cand_Gene_Present = ifelse(sum(Present == 0),"No","Yes"))
+
+##This reports the number of candidate genes detected in all significant bins
+data_bin_pvalue_z %>%
+  select(Chr,Bin,Grouped_pvalue,Rnk,Passed) %>%
+  filter(Passed) %>%
+  left_join(candGenes, by = c("Chr","Bin")) %>%
+  select(Chr,Bin,Maize_Gene_Name) %>%
+  group_by(Chr,Bin) %>%
+  mutate(Present = ifelse(!is.na(Maize_Gene_Name),1,0)) %>%
+  summarise(Cand_Gene_Present = ifelse(sum(Present == 0),"No","Yes")) %>%
+  filter(Cand_Gene_Present == "Yes") %>%
+  ungroup() %>%
+  summarise(Total = n()) %>%
+  pull(Total)
+
+##This reports all candidate genes identified in a significant bin 
+##along with all QTL identified. This is what was used to make supplemental table 4
+total_summary <- data_bin_pvalue_z %>%
+  filter(Passed) %>%
+  select(Chr,Bin,Grouped_pvalue,Rnk) %>%
+  left_join(candGenes %>%
+              select(Gene,Maize_Gene_Name, Chr,Bin,Species),
+            by = c("Chr","Bin")) %>%
+  left_join(data_bin %>%
+              select(QTLID,SourceID,Chr,Bin,Canopy_Level),
+            by = c("Chr","Bin")) %>%
+  arrange(Rnk,QTLID)
+# ##This will write it once uncommented
+# write_tsv(total_summary,
+#           path = "CandGene_QTL_Bin_Summary_10Mb.txt")
+
+##This is for plotting purposes. It calculates the order number of all bins, determines the
+##midpoint (for the break and label on the graph), and then the max for the bin for placing
+##the gray line that separates the chromosomes
+total_bins_midpoint <- total_bins %>%
+  left_join(data_bin_pvalue_z, by = c("Chr","Bin")) %>%
+  arrange(Chr,Bin) %>%
+  mutate(Bin_Order = row_number()) %>%
+  group_by(Chr) %>%
+  summarise(max = max(Bin_Order),
+            min = min(Bin_Order)) %>%
+  mutate(midpoint = (min + max) %/% 2)
+
+
+##This generates a manhattan type plot that and draws a line for the significance threshold
+##determined previously
+(bin_pvalue_plot <- total_bins %>%
+  left_join(data_bin_pvalue_z, by = c("Chr","Bin")) %>%
+  arrange(Chr,Bin) %>%
+  mutate(Bin_Order = row_number()) %>%
+  left_join(candGenes_formatted_z, by = c("Chr","Bin")) %>%
+  na.omit() %>%
+  mutate(Cand_Gene_Present = factor(Cand_Gene_Present,
+                                    levels = c("Yes","No"))) %>%
+  ggplot() +
+  geom_hline(yintercept = -log10(cutoff), color = "red", size  = .25) +
+  geom_vline(data = total_bins_midpoint %>%
+               filter(Chr != 10), 
+             aes(xintercept = max),
+             color = "light gray",
+             linetype = "dotted") +
+  geom_point(aes(x = Bin_Order, y = -log10(Grouped_pvalue),
+                 shape = Cand_Gene_Present, color = Cand_Gene_Present), size = 1.75) +
+  theme_bw() +
+  scale_x_continuous(breaks = total_bins_midpoint$midpoint, 
+                     labels = NULL, 
+                     name = NULL,
+                     expand = c(.025,0)) +
+  scale_y_continuous(name = "-log(p)",
+                     breaks = seq(0,60,by = 5)) +
+  theme(legend.position = "bottom",
+        plot.margin = unit(c(1,1,0,1),"lines"),
+        legend.margin = margin(t = -.4,r = 0,b = 0, l = 0, unit = "cm"),
+        axis.title.y = element_text(margin = margin(t = 0, r = 15, b = 0, l = 0)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.text = element_text(size = 8)) +
+  scale_shape_discrete(guide_legend(title = "Candidate gene in bin")) +
+  scale_colour_grey(guide_legend(title = "Candidate gene in bin")))
+
+##This creates a stacked barchart using the number of non-redundant QTL used to calculate
+##the p-values for the genomic bins. IT is stacked and color-coded by canopy level to 
+##look for any patterns related to level in the canopy and QTL detection
+(bin_barchar <- total_bins %>%
+  arrange(Chr,Bin) %>%
+  mutate(Bin_Order = row_number()) %>%
+  left_join(data_bin, by = c("Chr","Bin")) %>%
+  filter(pvalue_rank == 1) %>%
+  left_join(data_bin_pvalue_z %>% 
+              select(Chr,Bin,Passed) %>% 
+              unique(), by = c("Chr","Bin")) %>%
+  mutate(Canopy_Level = factor(Canopy_Level, levels = c(2:6,1))) %>%
+  na.omit() %>%
+  ggplot(aes(Bin_Order)) +
+  geom_vline(data = total_bins_midpoint %>%
+               filter(Chr != 10), 
+             aes(xintercept = max),
+             color = "light gray",
+             linetype = "dotted") +
+  geom_bar(aes(fill = Canopy_Level),width = .75) +
+  scale_x_continuous(breaks = total_bins_midpoint$midpoint, 
+                     labels = total_bins_midpoint$Chr, 
+                     name = "Genomic Bin Position",
+                     expand = c(.025,0)) +
+  scale_y_continuous(name = "Number of QTL per Genomic Bin",
+                     breaks = seq(0,20,by = 2),
+                     expand = c(0,0),
+                     limits = c(0,12.25)) +
+  theme_bw() +
+  theme(strip.text = element_blank(),
+        plot.margin = unit(c(.25,1,1,1),"lines"),
+        legend.position = "bottom",
+        panel.grid = element_blank(),
+        text = element_text(size = 10),
+        legend.text = element_text(size = 8),
+        legend.margin = margin(t = -.2,r = 0,b = 0, l = 0, unit = "cm"),
+        legend.key.size = unit(0.5,"cm")) +
+  scale_fill_manual(labels = c("Upper","Mid-Upper",
+                               "Middle","Mid-Lower", "Lower","All"),
+                    values = c("Green","Blue","Yellow","Orange","Brown","Red"),
+                    name = "Canopy Level") +
+  guides(fill = guide_legend(ncol = 6)))
+
+grid.draw(rbind(ggplotGrob(bin_pvalue_plot),ggplotGrob(bin_barchar),size = "last"))
+# #This prints out figure 4 from the paper
+# pdf("Genomic_Bins+CandGenes_barchart_v6_10Mb_all.pdf",
+#     onefile = TRUE, paper = 'A4r', width = 7, height = 6)
+# grid.draw(rbind(ggplotGrob(bin_pvalue_plot),ggplotGrob(bin_barchar),size = "last"))
+# dev.off()
+# ggsave(filename = "Genomic_Bins+CandGenes_barchart_v6_10Mb_all.png",
+#        plot = grid.draw(rbind(ggplotGrob(bin_pvalue_plot),ggplotGrob(bin_barchar),size = "last")),
+#        dpi = 600,
+#        width = 7,
+#        height = 6)
+
+##Reports the number of QTL from significant (Passed threshold)
+(passed_QTL <- data_bin_pvalue_z %>%
+  filter(Passed) %>%
+  select(n) %>%
+  summarise(Total = sum(n)) %>% 
+  pull(Total))
+
+##Reports the number of Bins that passed
+(passed_bins <- data_bin_pvalue_z %>%
+  filter(Passed) %>%
+  select(Chr,Bin) %>%
+  unique() %>%
+  summarise(n = n()) %>%
+  pull(n))
+
+##Reports as percentage
+passed_QTL / total_QTL
+
+##Reports the enrichment of the significant genomic bins
+(passed_QTL / nonRed_QTL) / (passed_bins / totalBinNum)
+
+##This pulls out the top 15 prominent genomic bins for further analysis
+top15_bins_filtered <- data_bin_pvalue_z %>%
+  select(Chr,Bin,Grouped_pvalue,Rnk) %>%
+  left_join(data_bin, by = c("Chr","Bin")) %>%
+  filter(Rnk <= 15,
+         pvalue_rank == 1)
+
+##This prints out the distribution of top 15 on different chromosomes
+data_bin_pvalue_z %>%
+  filter(Top_15 == "Yes") %>%
+  group_by(Chr) %>%
+  summarise(n = n())
+
+##Breaks down the number of QTL within a top 15 genomic bin
+top15_bin_num_Qtl_per_bin <- top15_bins_filtered %>%
+  group_by(Chr,Bin,Grouped_pvalue) %>%
+  summarise(n = n())
+
+##This pulls all the candidate genes within the bins that passed
+candGenes_sign_bins_z <- data_bin_pvalue_z %>%
+  select(Chr,Bin,Grouped_pvalue,Rnk,Passed) %>%
+  filter(Passed) %>%
+  left_join(candGenes, by = c("Chr","Bin")) %>%
+  filter(!is.na(Maize_Gene_Name))
+
+##Reports the number of genomic bins that have a candidate gene
+candGenes_sign_bins_z %>%
+  select(Chr,Bin) %>%
+  unique() %>%
+  summarise(n())
+
+##Reports the number of candidate gens in all significant bins
+dim(candGenes_sign_bins_z)[1]
+
+##This tells what candidate genes are identified in bins that the new QTL from this study overlap
+##with and report back how many other QTL overlap with this
+this_study_summary <- data_bin %>%
+  filter(SourceID == "This_Study",
+         pvalue_rank == 1) %>%
+  left_join(data_bin, by = c("Chr","Bin")) %>%
+  left_join(candGenes, by = c("Chr","Bin")) %>%
+  select(Chr,Bin,Gene,Species) %>%
+  unique() %>%
+  left_join(data_bin_pvalue_z %>%
+              select(Chr,Bin,n), by = c("Chr","Bin"))
+
+this_study_comp <- data_bin %>%
+  filter(SourceID == "This_Study",
+         pvalue_rank == 1) %>%
+  select(Chr,Bin) %>% 
+  left_join(data_bin, by = c("Chr","Bin")) %>%
+  group_by(Chr,Bin) %>% 
+  summarize(n = n())
+
+###This is the output for table 4
+top15_bins_candgenes <- data_bin_pvalue_z %>%
+  filter(Rnk <= 15) %>%
+  left_join(candGenes_sign_bins_z, by = c("Chr","Bin","Rnk",'Grouped_pvalue'))
+
+# write_tsv(top15_bins_candgenes,
+#           path = "top15_10Mb_candGene.txt")
+
+##Reports the number of QTL in top 15
+(top15_QTLs <- dim(top15_bins_filtered)[1])
+
+##Reports as percentage
+top15_QTLs / nonRed_QTL
+
+##Reports the fold enrichment for the top 15
+(top15_QTLs / nonRed_QTL) / (15 / totalBinNum)
+
+
+

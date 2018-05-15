@@ -1,0 +1,385 @@
+QTL Number	SourceID	Leaf	Sample Size	Chr	Left	Right	Marker 1	Marker 2	Position (cM)	Interval (cM)	LOD	p-value	LRT	Calculated p-value	R2	Additive Effect	Additive Effect	Dominant effect
+1	"Mickelson et al.,2002"	Average of all leaves above ear leaf	180	1	283330265	288122750	phi120		208	204 - 212	9.03			5.91324E-11		2.7		
+2	"Mickelson et al.,2002"	Average of all leaves above ear leaf	180	2	4056687	4737997	umc53a		12	10 - 14	3.66			2.14733E-05		-3.1		
+3	"Mickelson et al.,2002"	Average of all leaves above ear leaf	180	2	16323124	18818244	umc44b		38	30-48	5.94			8.89829E-08		-2.9		
+4	"Mickelson et al.,2002"	Average of all leaves above ear leaf	180	4	179772776	181424569	npi292		112	104 - 122	4.47			3.01575E-06		2.5		
+5	"Mickelson et al.,2002"	Average of all leaves above ear leaf	180	5	27043274	31708046	bnl5.02		68	64 - 72	9.9			7.63534E-12		2.3		
+6	"Mickelson et al.,2002"	Average of all leaves above ear leaf	180	5	27043274	31708046	bnl5.02		68	64-72	10.98			6.04724E-13		2.3		
+7	"Mickelson et al.,2002"	Average of all leaves above ear leaf	180	5	195410938	197881442	phi101		128	120 - 132	4.13			6.85793E-06		1.1		
+8	"Mickelson et al.,2002"	Average of all leaves above ear leaf	180	6	8276599	87110141	umc85		6	0 - 14	6.54			2.13346E-08		-3.2		
+9	"Mickelson et al.,2002"	Average of all leaves above ear leaf	180	7	4717236	10801399	phi057		16	12 - 20	12.59			1.39204E-14		2.8		
+10	"Mickelson et al.,2002"	Average of all leaves above ear leaf	180	7	17112435	50191461	phi034		30	24-34	11.3			2.85547E-13		2.4		
+11	"Yu et al.,2006"	Third leaf below flag leaf	120	1	7850302	16242223	bnlg1429				2.47			0.000403604	14	3.962		0.213
+12	"Yu et al.,2006"	Third leaf below flag leaf	114	1	175697524	198165779	umc2236				2.06			0.001134776	8.4	-0.04		0.014
+13	"Yu et al.,2006"	Third leaf below flag leaf	120	2	13724050	14418060	umc2193				2.38			0.000505725	11.2	-3.779		0.73
+14	"Yu et al.,2006"	Third leaf below flag leaf	120	3	13117469	33743281	mmc0132				2.33			0.000573415	9.6	3.315		1.012
+15	"Yu et al.,2006"	Third leaf below flag leaf	114	8	100267580	100627621	phi100175				3.04			9.80635E-05	12.2	-0.034		0.056
+16	"Yu et al.,2006"	Third leaf below flag leaf	120	8	122005904	138329683	umc1316				3.01			0.000105591	16.8	-3.968		-2.877
+17	"Yu et al.,2006"	Third leaf below flag leaf	120	9	127165497	130886466	umc1519				3.32			4.92821E-05	14.2	3.979		1.307
+18	"Yu et al.,2006"	Third leaf below flag leaf	120	10	142239054	149070314	P5680200				2.59			0.000299081	14.8	2.07		10.772
+19	"Yu et al.,2006"	Third leaf below flag leaf	120	10	145247590	149070314	P8291167				2.26			0.000683934	9.2	2.957		-0.961
+20	"Lu et al.,2007"	Average of first through third leaf above ear leaf	397	1	7991271	16242223	umc1269	bnlg1429	36.91		3.82			1.45475E-05	3.64	-1.21		0.65
+21	"Lu et al.,2007"	Average of first through third leaf above ear leaf	397	1	257935410	275551409	bnlg1331	phi308707	169.71		11.61			1.38086E-13	10.82	-1.61		-0.46
+22	"Lu et al.,2007"	Average of first through third leaf above ear leaf	397	2	1	4737997	phi402893	bnlg1017	11.81		3.72			1.85539E-05	2.86	-1.1		0.61
+23	"Lu et al.,2007"	Average of first through third leaf above ear leaf	397	3	47608189	119666760	phi374118	umc1773	81.81		4.35			4.02875E-06	3.77	0.57		0.82
+24	"Lu et al.,2007"	Average of first through third leaf above ear leaf	397	3	179930588	193797228	bnlg2241	bnlg197	124.81		11.96			6.08265E-14	11.21	1.82		0.55
+25	"Lu et al.,2007"	Average of first through third leaf above ear leaf	397	5	174179562	204659857	umc1822	phi048	93.81		10			6.03612E-12	8.65	1.51		0.31
+26	"Ku et al.,2010"	Average of first through third leaf above ear leaf	229	1	21418970	22003176	umc2226		51.5	48.7-53.5	10.8			9.22453E-13	20.4	2		-0.4
+27	"Ku et al.,2010"	Average of first through third leaf above ear leaf	229	2	206145623	223989301	bnlg1662	Phi328189	125.7	123.7-127.7	3.8			1.52723E-05	7.3	1.2		-0.5
+28	"Ku et al.,2010"	Average of first through third leaf above ear leaf	229	5	135859010	147661531	bnlg1287		58.9	56.9-68	4.7			1.73284E-06	9.7	1.4		-0.9
+29	"Tian et al.,2011"	One leaf below flag leaf	4892	1	28422259	28422259	m33		47.3	41.7-48.5		4.10E-29		4.1E-29	1.27			
+30	"Tian et al.,2011"	One leaf below flag leaf	4892	1	175670147	175670147	m82		94.9	89.7-96.6		9.00E-11		9E-11	0.63			
+31	"Tian et al.,2011"	One leaf below flag leaf	4892	1	231764987	231764987	m116		138	137.6-142.7		7.40E-10		7.4E-10	0.59			
+32	"Tian et al.,2011"	One leaf below flag leaf	4892	1	253089640	253089640	m122		148	146-150.1		1.30E-08		0.000000013	0.55			
+33	"Tian et al.,2011"	One leaf below flag leaf	4892	1	282864077	282864077	m146		177	175-181.3		2.10E-10		2.1E-10	0.61			
+34	"Tian et al.,2011"	One leaf below flag leaf	4892	2	4195557	4195557	m189		11.5	10.2-14		3.30E-57		3.3E-57	2.21			
+35	"Tian et al.,2011"	One leaf below flag leaf	4892	2	13858734	13858734	m200		38.6	36.7-43.9		5.10E-21		5.1E-21	1			
+36	"Tian et al.,2011"	One leaf below flag leaf	4892	2	185341699	185341699	m260		91.5	90-96.1		3.10E-06		0.0000031	0.45			
+37	"Tian et al.,2011"	One leaf below flag leaf	4892	3	24354972	24354972	m318		52.1	48-55.1		4.20E-22		4.2E-22	1.03			
+38	"Tian et al.,2011"	One leaf below flag leaf	4892	3	158556357	158556357	m365		70.1	68.6-72		3.10E-15		3.1E-15	0.79			
+39	"Tian et al.,2011"	One leaf below flag leaf	4892	3	176339982	176339982	m381		84.6	84.2-85.7		8.00E-70		8E-70	2.63			
+40	"Tian et al.,2011"	One leaf below flag leaf	4892	3	225394042	225394042	m426		145	140.6-151.2		9.40E-08		0.000000094	0.51			
+41	"Tian et al.,2011"	One leaf below flag leaf	4892	4	124005358	124005358	m477		58.3	58-60.2		1.30E-22		1.3E-22	1.05			
+42	"Tian et al.,2011"	One leaf below flag leaf	4892	4	178920884	178920884	m499		90.7	85.9-99.3		4.10E-10		4.1E-10	0.6			
+43	"Tian et al.,2011"	One leaf below flag leaf	4892	4	239643577	239643577	m541		138	126.9-139.6		8.80E-08		0.000000088	0.51			
+44	"Tian et al.,2011"	One leaf below flag leaf	4892	5	4201827	4201827	m553		13.3	7.3-18.2		5.90E-11		5.9E-11	0.64			
+45	"Tian et al.,2011"	One leaf below flag leaf	4892	5	35298689	35298689	m585		58	57.2-58.6		8.60E-15		8.6E-15	0.78			
+46	"Tian et al.,2011"	One leaf below flag leaf	4892	5	69148160	69148160	m604		65	63.5-67.5		5.70E-11		5.7E-11	0.64			
+47	"Tian et al.,2011"	One leaf below flag leaf	4892	5	199430431	199430431	m659		106	102.6-107.6		3.50E-19		3.5E-19	0.93			
+48	"Tian et al.,2011"	One leaf below flag leaf	4892	6	93158126	93158126	m703		18.6	17.5-21.3		5.50E-21		5.5E-21	1			
+49	"Tian et al.,2011"	One leaf below flag leaf	4892	7	136296424	136296424	m804		71.5	69.7-73.1		5.30E-16		5.3E-16	0.82			
+50	"Tian et al.,2011"	One leaf below flag leaf	4892	7	168700086	168700086	m828		115	113.5-116.7		1.20E-13		1.2E-13	0.73			
+51	"Tian et al.,2011"	One leaf below flag leaf	4892	7	174830706	174830706	m836		134	128-135		5.10E-06		0.0000051	0.44			
+52	"Tian et al.,2011"	One leaf below flag leaf	4892	8	91502989	91502989	m877		56	55.9-56.1		1.10E-13		1.1E-13	0.74			
+53	"Tian et al.,2011"	One leaf below flag leaf	4892	8	124537397	129941036	m899		68	66.3-68.1		2.10E-08		0.000000021	0.54			
+54	"Tian et al.,2011"	One leaf below flag leaf	4892	8	156915492	156915492	m920		82.6	82-90.4		5.80E-09		5.8E-09	0.56			
+55	"Tian et al.,2011"	One leaf below flag leaf	4892	9	107644532	107644532	m988		51.9	48.4-52.6		6.30E-20		6.3E-20	0.96			
+56	"Tian et al.,2011"	One leaf below flag leaf	4892	9	147173273	147173273	m1017		88.5	87.4-92.4		9.20E-27		9.2E-27	1.19			
+57	"Tian et al.,2011"	One leaf below flag leaf	4892	10	87098338	87098338	m1060		40.8	40-45.8		2.00E-12		2E-12	0.69			
+58	"Tian et al.,2011"	One leaf below flag leaf	4892	10	143896778	143896778	m1098		81.6	76.7-86.4		1.80E-14		1.8E-14	0.77			
+59	"Ku et al.,2012"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	256	1	51270418	82587237			54.91	54.61-56.91	12.06			4.81279E-14	17.65	-1.51		
+60	"Ku et al.,2012"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	256	2	15027535	29399406			26.61	22.51-30.61	8.73			1.19902E-10	18.43	-1.61		
+61	"Ku et al.,2012"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	256	3	43110699	126275300	umc2127	phi022228	86.41	81.01-100.41	4.76			1.49993E-06	9.26	1.17		
+62	"Ku et al.,2012"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	256	7	43876236	128210329			57.51	81.31-93.51	3.76			1.68329E-05	7.34	-1.29		
+63	"Ku et al.,2012"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	256	8	21158286	108216915			36.81	28.81-38.81	2.57			0.000314376	7.62	1.04		
+64	"Wassom,2013"	Ear Leaf	93	1	165422389	173249053	umc1603	uaz273			4.27			4.88777E-06	16.4	-3.802		
+65	"Wassom,2013"	Ear Leaf	93	5	168686976	171021198	csu308	umc1482			4.8			1.36238E-06	13.9	3.084		
+66	"Wassom,2013"	Ear Leaf	93	9	3921427	8267332	umc1867	lim343			4.76			1.49993E-06	10.4	-2.76		
+67	"Potts,2014"	Third leaf below flag leaf	320	1	3071510	3879863					3.28			5.43597E-05				
+68	"Potts,2014"	Third leaf below flag leaf	320	1	17678803	23248717					2.48			0.000393631				
+69	"Potts,2014"	Third leaf below flag leaf	320	3	10068218	30451930					2.78			0.000186479				
+70	"Potts,2014"	Third leaf below flag leaf	320	4	10039544	22130374					3.82			1.45475E-05				
+71	"Potts,2014"	Third leaf below flag leaf	320	4	198296536	207044673					2.72			0.000216422				
+72	"Potts,2014"	Third leaf below flag leaf	320	5	14605940	15349044					3.65			2.2003E-05				
+73	"Potts,2014"	Third leaf below flag leaf	320	5	65252308	80430321					3.45			3.58505E-05				
+74	"Potts,2014"	Third leaf below flag leaf	320	5	80843693	92279198					3.61			2.42566E-05				
+75	"Potts,2014"	Third leaf below flag leaf	320	5	168912182	188806080					4.04			8.52857E-06				
+76	"Potts,2014"	Third leaf below flag leaf	320	5	198263118	206525437					5.26			4.51797E-07				
+77	"Potts,2014"	Third leaf below flag leaf	320	7	125541578	130736597					3.18			6.94845E-05				
+78	"Potts,2014"	Third leaf below flag leaf	320	7	152056249	156777184					2.88			0.000145569				
+79	"Chen et al.,2015"	Second leaf above ear leaf	144	1	27031287	27399426	bnlg1803	bnlg1007	91	90.1-93.2	14.84			7.25229E-17	29.1	-5.14		-1.42
+80	"Chen et al.,2015"	Second leaf above ear leaf	144	1	27399426	32876200	umc1073	bnlg1803	89	85.1-90.1	4.7			1.73284E-06	14.55	-2.97		-1.14
+81	"Chen et al.,2015"	Second leaf above ear leaf	144	2	4670771	4706476	umc1542	umc1227	122	119.5-124.2	3.9			1.19778E-05	7.86	-2.83		0.25
+82	"Chen et al.,2015"	Second leaf above ear leaf	144	3	5234938	8775798	bnlg1904	bnlg1523	119	103.1-121.2	5.57			2.15207E-07	10.76	-2.97		0.65
+83	"Chen et al.,2015"	Second leaf above ear leaf	144	5	80784987	84288929	dupssr110	umc1110	66	64.9-66.0	3.72			1.85539E-05	6.17	-2.31		-0.79
+84	"Chen et al.,2015"	Third leaf above ear leaf	144	1	27031287	27399426	bnlg1803	bnlg1007	92	90.1-93.2	13.18			3.50244E-15	31.86	-6.07		-1.25
+85	"Chen et al.,2015"	Third leaf above ear leaf	144	1	32878324	33165747	umc1073	nblg1803	90	85.1-90.1	8.98			6.65234E-11	20.87	-4.22		-1.03
+86	"Chen et al.,2015"	Third leaf above ear leaf	144	2	4670771	4706476	umc1542	umc1227	122	119.5-124.2	3.9			1.19778E-05	7.86	-2.83		0.25
+87	"Chen et al.,2015"	Third leaf above ear leaf	144	5	172147087	180235920	umc1155	mmc0081	51	47.4-55.1	4.92			1.02111E-06	10.96	-3.42		1.48
+88	"Chen et al.,2015"	Third leaf above ear leaf	144	10	13351444	24629497	umc1863	umc1962	40	38.1-40.2	26.52			1.1682E-28	85.09	-8.51		-0.35
+89	"Chen et al.,2015"	Third leaf above ear leaf	144	10	82094750	83685859	phi050	bnlg1712	43	42.8-43.9	18.51			1.40155E-20	51.48	6.67		0.13
+90	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	1	7850302	16242223	umc1071	bnlg1429	18	11-48.40	4.67			1.86258E-06	2.27	-0.74	0.43	0.27
+91	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	1	83535266	154972600	umc2112	umc1703	98	74-112.90	7.76			1.18389E-09	4.1	-1.06	0.53	0.16
+92	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	1	229874104	239673067	umc1245	dupssr12	144	142.80-180.7	9.77			1.03646E-11	4.88	-1.28	0.18	0.04
+93	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	2	2089041	4056687	umc1622	umc2363	17		7.87			9.12808E-10	4.06	-1.12	-0.02	0.28
+94	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	2	4056687	4737997	bnlg1017	bnlg1338	23		13.72			9.91419E-16	7.23	-0.05	-1.54	0.2
+95	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	2	41522748	50549941	bnlg1018	umc2030	79		9.26			3.4405E-11	4.54	-0.29	1.23	0.11
+96	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	4	145727587	166945674	mmc0371	bnlg2291	70		12.54			1.56481E-14	7.75	-1.07	1.4	-0.14
+97	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	4	173945116	177588057	umc1847	umc1194	89		5.14			6.0231E-07	3.77	-1.14	0.28	-0.18
+98	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	5	135859010	173960605	umc1591	umc1348	66		10.64			1.34278E-12	5.44	0.04	1.34	-0.01
+99	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	7	129863292	138799755	umc1567	dupssr9	94		10.81			9.01062E-13	5.66	-1.37	0.07	-0.06
+100	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	7	161990137	165307798	dupssr13	umc2332	124		4.79			1.39554E-06	2.38	0.11	-0.89	-0.06
+101	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	8	70795031	100860341	umc1360	umc1735	19		6.04			7.01122E-08	3.06	0.23	-0.98	0.07
+102	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	8	159898721	164915038	umc1149	umc1724	67		12.21			3.38752E-14	6.99	1.46	-0.52	-0.22
+103	"Ding et al.,2015"	Average of first through fourth leaf above ear leaf	305	9	11736162	13365954	umc1967	dupssr6	47		6.4			2.97596E-08	3.42	0.17	-1.08	-0.03
+104	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	1	10840898	13679345					8			6.71379E-10	2			
+105	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	1	58513272	63207144					7			7.15881E-09	8.3			
+106	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	1	188143162	192349790					10			6.03612E-12	6.7			
+107	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	1	291976604	292952418					8			6.71379E-10	5.6			
+108	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	2	3100473	4308553					7			7.15881E-09	4.3			
+109	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	2	10614341	12805978					10			6.03612E-12	4.1			
+110	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	3	4147003	4752993					8			6.71379E-10	3.7			
+111	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	5	82270542	90464010					4			9.39706E-06	6.2			
+112	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	6	92149762	97077088					4			9.39706E-06	2.7			
+113	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	6	130148319	132979794					8			6.71379E-10	2.5			
+114	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	7	126258027	129264884					10			6.03612E-12	4.6			
+115	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	7	153856361	155291619					10			6.03612E-12	9.2			
+116	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	8	163585298	164457016					12			5.53876E-14	7.6			
+117	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	9	48455635	78920645					6			7.71244E-08	11.4			
+118	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	9	103447833	32305369					8			6.71379E-10	8.6			
+119	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	9	142464481	144869430					8			6.71379E-10	4.5			
+120	"Li et al.,2015"	"Average of first leaf above ear leaf, ear leaf, and first leaf below ear leaf"	538	10	141074427	141790473					12			5.53876E-14	6.9			
+121	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	215	1	19653937	20021330	PZE-103026528	PZE-103027544			10.62			1.40732E-12	20.26	2.83		
+122	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	208	1	35972586	40592153	SYN450	PZE-101056856			4.18			6.07625E-06	10.35	-2.48		
+123	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	212	1	44142044	45267690	SYN13385	PZE-101061168			4.82			1.29843E-06	10.85	-1.83		
+124	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	208	1	110120604	113684209	PZE-101106851	PZE-101107894			2.94			0.000125504	7.71	-1.84		
+125	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	223	1	173918585	175948571	PZE-101134523	SYN2408			6.13			5.65826E-08	12.4	-1.36		
+126	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	223	2	18528060	22582637	PZE-102037260	PZE-102043278			3.97			1.01063E-05	9.02	1.13		
+127	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	212	2	146496238	149439275	SYN34894	SYN13599			2.9			0.000138544	6.52	1.61		
+128	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	215	3	85203524	87514042	PZE-106038186	PZE-106039805			4.09			7.55547E-06	6.66	-1.41		
+129	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	208	3	135761595	144754274	PZE-103084178	PZE-103089927			2.58			0.000306632	6.91	1.63		
+130	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	215	3	179359857	183308471	PZE-103123325	PZE-103125642			4.8			1.36238E-06	7.62	1.5		
+131	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	223	4	174869059	175617518	PZE-104099276	ZM0054651585			3.45			3.58505E-05	15.32	1.46		
+132	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	212	4	182233034	184677870	PZE-104106033	PZE-104108744			5.24			4.73967E-07	11.32	1.95		
+133	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	212	4	200408479	203577087	PZE-104118015	PZE-104120560			4.77			1.46429E-06	9.87	1.75		
+134	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	223	5	204572347	206728313	PZE-105156713	ZM0042010285			3.13			7.85729E-05	6.84	1.06		
+135	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	215	6	159827433	164271408	PZE-107118905	PZE-107116723			4.57			2.36976E-06	7.54	-1.49		
+136	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	212	7	127334748	146835621	PZE-107077981	PZE-107097026			6.44			2.70594E-08	16.02	-2.23		
+137	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	215	7	167295658	170169146	PZE-108118826	SYN23659			3.76			1.68329E-05	7.32	-1.47		
+138	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	215	8	128169020	130267552	PZE-110072468	PZE-110074914			3.14			7.6664E-05	5.56	1.48		
+139	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	223	9	99510056	111434991	PZB01899.2	PZE-109070379			3.9			1.19778E-05	10.27	-1.08		
+140	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	215	10	31928550	42184648	SYN8490	PZE-101058274			9.89			7.81693E-12	18.04	-2.35		
+141	"Ku et al.,2016"	Average of first through fourth leaf above the ear leaf	223	10	147926131	148637945	PUT163a149071204827	PZE-110110920			2.57			0.000314376	7.75	1.62		
+142	"Pan et al.,2017"	First leaf above ear leaf	188	1	22506517	22773566				57.1-60.8	7.1			5.64772E-09	10.1	-2.19		
+143	"Pan et al.,2017"	First leaf above ear leaf	188	1	24509648	24584788				55.9-58.6	4.1			7.37466E-06	7	0.99		
+144	"Pan et al.,2017"	First leaf above ear leaf	1887	1	27634931	27705954							29.13	3.49334E-08	2.34			
+145	"Pan et al.,2017"	First leaf above ear leaf	188	1	29542648	29551344				65.6-69.1	11.4			2.2588E-13	15.3	-2.69		
+146	"Pan et al.,2017"	First leaf above ear leaf	188	1	33122926	33122926				63.9-66.6	3.7			1.94798E-05	6.4	0.94		
+147	"Pan et al.,2017"	First leaf above ear leaf	188	1	35573276	35747543				97-102.8	4.9			1.07136E-06	8.3	0.87		
+148	"Pan et al.,2017"	First leaf above ear leaf	188	1	43978651	45105923				84.3-87	5.4			3.23145E-07	8.3	-0.95		
+149	"Pan et al.,2017"	First leaf above ear leaf	1887	1	47239702	47307215							3.57	0.035429115	0.61			
+150	"Pan et al.,2017"	First leaf above ear leaf	1887	1	48538829	48599943							3.19	0.045322622	0.56			
+151	"Pan et al.,2017"	First leaf above ear leaf	1887	1	50059878	50176238							4.31	0.02227239	0.66			
+152	"Pan et al.,2017"	First leaf above ear leaf	1887	1	51163192	51304680							3.18	0.045621365	0.55			
+153	"Pan et al.,2017"	First leaf above ear leaf	188	1	52537654	52537654				91.8-94.1	7.6			1.72845E-09	11.3	-1.1		
+154	"Pan et al.,2017"	First leaf above ear leaf	188	1	80631671	80928129				107-111.2	9.1			5.01449E-11	16.8	-1.07		
+155	"Pan et al.,2017"	First leaf above ear leaf	1887	1	84877411	84981293							6.26	0.006970777	0.81			
+156	"Pan et al.,2017"	First leaf above ear leaf	1887	1	88006144	88012899							3.72	0.032199628	0.59			
+157	"Pan et al.,2017"	First leaf above ear leaf	1887	1	89702495	90099206							6.6	0.005727516	0.83			
+158	"Pan et al.,2017"	First leaf above ear leaf	1887	1	91228557	91364745							5.66	0.009895744	0.76			
+159	"Pan et al.,2017"	First leaf above ear leaf	188	1	91257996	92819138				177.2-179.7	5.2			5.21636E-07	8.6	-0.88		
+160	"Pan et al.,2017"	First leaf above ear leaf	1887	1	93503775	93639922							3.29	0.042451955	0.51			
+161	"Pan et al.,2017"	First leaf above ear leaf	188	1	162755218	163451148				187.4-191.3	4.4			3.57063E-06	7.3	-0.82		
+162	"Pan et al.,2017"	First leaf above ear leaf	188	1	194707416	194707416				133.1-140.8	4			9.39706E-06	5.9	0.73		
+163	"Pan et al.,2017"	First leaf above ear leaf	1887	1	196650880	196702831							8.07	0.002483677	0.89			
+164	"Pan et al.,2017"	First leaf above ear leaf	188	1	199310851	199524960				158.9-162.5	4			9.39706E-06	5.1	-1.56		
+165	"Pan et al.,2017"	First leaf above ear leaf	188	1	200196311	200516955				143.4-146.9	3.4			4.05143E-05	5	0.67		
+166	"Pan et al.,2017"	First leaf above ear leaf	188	1	216216335	216526129				177.5-179.4	5.9			9.78879E-08	7.3	-1.86		
+167	"Pan et al.,2017"	First leaf above ear leaf	1887	1	279636145	279669996							4.07	0.025841849	0.6			
+168	"Pan et al.,2017"	First leaf above ear leaf	1887	1	281997461	282305297							4.25	0.023112122	0.6			
+169	"Pan et al.,2017"	First leaf above ear leaf	1887	1	283354124	283443692							3.28	0.042729734	0.52			
+170	"Pan et al.,2017"	First leaf above ear leaf	1887	1	283772024	283882271							2.79	0.059192565	0.46			
+171	"Pan et al.,2017"	First leaf above ear leaf	1887	2	2400136	2453541							5.39	0.011606254	0.7			
+172	"Pan et al.,2017"	First leaf above ear leaf	188	2	4327498	4377056				17.2-19.8	9.8			9.65874E-12	12.9	-2.46		
+173	"Pan et al.,2017"	First leaf above ear leaf	1887	2	4494692	4548461							46.35	5.0479E-12	3.28			
+174	"Pan et al.,2017"	First leaf above ear leaf	188	2	6200423	6202137				24.9-30.2	7			7.15881E-09	9.8	-2.14		
+175	"Pan et al.,2017"	First leaf above ear leaf	1887	2	9096813	9109407							4.67	0.017872035	0.62			
+176	"Pan et al.,2017"	First leaf above ear leaf	1887	2	9202099	9268552							4.05	0.026165933	0.57			
+177	"Pan et al.,2017"	First leaf above ear leaf	1887	2	9531831	9717146							2.95	0.053139161	0.46			
+178	"Pan et al.,2017"	First leaf above ear leaf	1887	2	14381688	14429234							4.91	0.015458821	0.66			
+179	"Pan et al.,2017"	First leaf above ear leaf	188	2	15253987	15284486				43.6-48.2	5.1			6.62936E-07	7.4	-0.91		
+180	"Pan et al.,2017"	First leaf above ear leaf	1887	2	15423748	15536477							6.03	0.007968077	0.76			
+181	"Pan et al.,2017"	First leaf above ear leaf	1887	2	16020717	16040402							3	0.051393443	0.51			
+182	"Pan et al.,2017"	First leaf above ear leaf	188	2	16032870	16142879				53.6-59.3	3.5			3.17268E-05	6.2	0.9		
+183	"Pan et al.,2017"	First leaf above ear leaf	1887	2	16336238	16420893							2.77	0.060002911	0.48			
+184	"Pan et al.,2017"	First leaf above ear leaf	188	2	17553181	17723017				51.4-56.6	3.4			4.05143E-05	5.1	-0.75		
+185	"Pan et al.,2017"	First leaf above ear leaf	188	2	28745837	28938062				67.7-71.6	5.4			3.23145E-07	8.6	-0.96		
+186	"Pan et al.,2017"	First leaf above ear leaf	188	2	37762188	40058255				77-79.8	8.6			1.62906E-10	13.2	-1.19		
+187	"Pan et al.,2017"	First leaf above ear leaf	1887	2	165425190	165504313							3.75	0.031593103	0.53			
+188	"Pan et al.,2017"	First leaf above ear leaf	188	2	233265452	233265756				306-309.8	3.6			2.48554E-05	5.9	0.72		
+189	"Pan et al.,2017"	First leaf above ear leaf	188	2	234464308	234464308				312.2-318.5	3.8			1.52723E-05	6.5	0.75		
+190	"Pan et al.,2017"	First leaf above ear leaf	1887	3	11221380	11231780							3.93	0.028204937	0.58			
+191	"Pan et al.,2017"	First leaf above ear leaf	188	3	19765078	19765078				55.9-61.4	4.4			3.57063E-06	8.1	-1.02		
+192	"Pan et al.,2017"	First leaf above ear leaf	188	3	43230436	43231311				66.2-72.4	6.7			1.45887E-08	12	-1.24		
+193	"Pan et al.,2017"	First leaf above ear leaf	1887	3	216586938	216804832							5.03	0.01438386	0.67			
+194	"Pan et al.,2017"	First leaf above ear leaf	1887	3	228766697	228799192							2.87	0.056073354	0.41			
+195	"Pan et al.,2017"	First leaf above ear leaf	188	3	228790283	228808100				169.7-174.1	3.1			8.45923E-05	4.4	0.68		
+196	"Pan et al.,2017"	First leaf above ear leaf	1887	3	230173016	230246189							4.5	0.019821715	0.64			
+197	"Pan et al.,2017"	First leaf above ear leaf	1887	3	230454324	230514857							2.96	0.052784739	0.5			
+198	"Pan et al.,2017"	First leaf above ear leaf	1887	3	231236596	231314019							7.95	0.002657088	0.91			
+199	"Pan et al.,2017"	First leaf above ear leaf	1887	4	181275434	181330385							3.26	0.043291363	0.5			
+200	"Pan et al.,2017"	First leaf above ear leaf	1887	4	181926544	181962948							5.11	0.013711255	0.65			
+201	"Pan et al.,2017"	First leaf above ear leaf	1887	4	183853540	183922735							2.87	0.056073354	0.46			
+202	"Pan et al.,2017"	First leaf above ear leaf	188	4	216777601	218672088				130-133.3	3.8			1.52723E-05	6.8	-1.15		
+203	"Pan et al.,2017"	First leaf above ear leaf	188	4	232269930	232274188				137.1-144.6	4			9.39706E-06	7.2	-1.17		
+204	"Pan et al.,2017"	First leaf above ear leaf	1887	4	240061702	240119157							4.63	0.018311665	0.62			
+205	"Pan et al.,2017"	First leaf above ear leaf	188	4	240170537	240175659				178-184.9	4.1			7.37466E-06	7	-0.9		
+206	"Pan et al.,2017"	First leaf above ear leaf	1887	4	240464686	240524847							2.82	0.058000307	0.47			
+207	"Pan et al.,2017"	First leaf above ear leaf	188	5	7251629	7251629				53.5-55.3	3.9			1.19778E-05	6.3	0.76		
+208	"Pan et al.,2017"	First leaf above ear leaf	188	5	8007485	8347022				55.8-65.8	3.5			3.17268E-05	5.6	0.7		
+209	"Pan et al.,2017"	First leaf above ear leaf	188	5	14033008	14033008				55-59.5	7.7			1.36436E-09	12.3	-1.07		
+210	"Pan et al.,2017"	First leaf above ear leaf	188	5	17249401	18562433				62.8-69.3	9.6			1.54587E-11	15.3	-1.17		
+211	"Pan et al.,2017"	First leaf above ear leaf	188	5	23054811	25980602				73.1-76.4	5			8.42674E-07	8.6	-0.89		
+212	"Pan et al.,2017"	First leaf above ear leaf	188	5	42326018	42689693				75.4-80.4	4.6			2.20453E-06	6.8	0.86		
+213	"Pan et al.,2017"	First leaf above ear leaf	188	5	67533061	68900250				85.8-98.5	3.1			8.45923E-05	4.6	0.7		
+214	"Pan et al.,2017"	First leaf above ear leaf	1887	5	195899409	196121434							3.31	0.041902381	0.51			
+215	"Pan et al.,2017"	First leaf above ear leaf	1887	5	196512726	196621965							4.45	0.020437362	0.59			
+216	"Pan et al.,2017"	First leaf above ear leaf	188	5	209916824	209920981				264.1-270.8	3.2			6.61529E-05	4.7	0.64		
+217	"Pan et al.,2017"	First leaf above ear leaf	188	5	215388844	215561626				211.7-218.6	3.2			6.61529E-05	5.1	-0.82		
+218	"Pan et al.,2017"	First leaf above ear leaf	1887	6	116008768	116123414							6.84	0.004989935	0.78			
+219	"Pan et al.,2017"	First leaf above ear leaf	1887	6	117673508	117713194							5.51	0.010810679	0.68			
+220	"Pan et al.,2017"	First leaf above ear leaf	1887	6	127925191	128018348							4.96	0.015000955	0.64			
+221	"Pan et al.,2017"	First leaf above ear leaf	188	6	137859504	138474635				70.7-76.3	3.4			4.05143E-05	5.7	0.64		
+222	"Pan et al.,2017"	First leaf above ear leaf	188	6	157932764	158403893				111.7-114.4	5.6			2.0032E-07	11	-1.44		
+223	"Pan et al.,2017"	First leaf above ear leaf	1887	6	158996812	159090623							3.06	0.049383151	0.47			
+224	"Pan et al.,2017"	First leaf above ear leaf	188	6	161475913	161990361				116.7-123	8.5			2.06236E-10	16.7	-1.76		
+225	"Pan et al.,2017"	First leaf above ear leaf	188	6	163207888	163215474				178-187.3	4.3			4.54595E-06	7.1	0.79		
+226	"Pan et al.,2017"	First leaf above ear leaf	1887	6	163289912	163294289							3.66	0.033451117	0.53			
+227	"Pan et al.,2017"	First leaf above ear leaf	1887	7	125895040	126130226							8.19	0.00232184	1			
+228	"Pan et al.,2017"	First leaf above ear leaf	188	7	129896750	129931436				79.8-82.9	5			8.42674E-07	10.7	-1.18		
+229	"Pan et al.,2017"	First leaf above ear leaf	1887	7	129959645	130064166							4.14	0.024741175	0.65			
+230	"Pan et al.,2017"	First leaf above ear leaf	1887	7	130999702	131042570							3.44	0.03851628	0.57			
+231	"Pan et al.,2017"	First leaf above ear leaf	1887	7	134008634	134044794							4.52	0.01958102	0.7			
+232	"Pan et al.,2017"	First leaf above ear leaf	188	7	134132654	134132654				82.5-85.9	3.7			1.94798E-05	5.6	-0.72		
+233	"Pan et al.,2017"	First leaf above ear leaf	1887	7	135343490	135762154							3.25	0.043575246	0.53			
+234	"Pan et al.,2017"	First leaf above ear leaf	1887	7	136335677	136384730							3.08	0.048732782	0.52			
+235	"Pan et al.,2017"	First leaf above ear leaf	1887	7	137044670	137259128							3.09	0.0484112	0.52			
+236	"Pan et al.,2017"	First leaf above ear leaf	1887	7	137434476	137625901							3.82	0.030225669	0.6			
+237	"Pan et al.,2017"	First leaf above ear leaf	1887	7	139094343	139316940							4.26	0.022969843	0.63			
+238	"Pan et al.,2017"	First leaf above ear leaf	1887	7	142192901	142345480							7.91	0.00271761	0.9			
+239	"Pan et al.,2017"	First leaf above ear leaf	1887	7	143347502	143399578							3.07	0.049056759	0.51			
+240	"Pan et al.,2017"	First leaf above ear leaf	188	7	145188730	145754730				111.5-115.4	4.9			1.07136E-06	10.9	1.26		
+241	"Pan et al.,2017"	First leaf above ear leaf	188	7	146275621	146275621				87.1-95	5.5			2.54404E-07	8.1	-0.86		
+242	"Pan et al.,2017"	First leaf above ear leaf	188	7	150077434	150928908				117.2-120.5	5.4			3.23145E-07	11.8	1.32		
+243	"Pan et al.,2017"	First leaf above ear leaf	188	7	154229949	154229949				100.9-103	5			8.42674E-07	7.5	-0.82		
+244	"Pan et al.,2017"	First leaf above ear leaf	188	7	157934803	158076398				129.5-130.9	4.2			5.78924E-06	9.4	1.18		
+245	"Pan et al.,2017"	First leaf above ear leaf	1887	7	161232195	161355449							2.77	0.060002911	0.42			
+246	"Pan et al.,2017"	First leaf above ear leaf	1887	7	161792149	161848968							4.25	0.023112122	0.55			
+247	"Pan et al.,2017"	First leaf above ear leaf	1887	8	881686	908714							4.17	0.024284996	0.6			
+248	"Pan et al.,2017"	First leaf above ear leaf	1887	8	1411367	1486511							2.88	0.055696739	0.49			
+249	"Pan et al.,2017"	First leaf above ear leaf	1887	8	4451361	4471212							4.27	0.022828502	0.66			
+250	"Pan et al.,2017"	First leaf above ear leaf	188	8	25017177	25017177				60.3-62.9	3.5			3.17268E-05	4.3	-1.42		
+251	"Pan et al.,2017"	First leaf above ear leaf	1887	8	27410053	27569763							3.87	0.02928834	0.57			
+252	"Pan et al.,2017"	First leaf above ear leaf	1887	8	41026711	41906324							6.48	0.006137739	0.8			
+253	"Pan et al.,2017"	First leaf above ear leaf	1887	8	50893519	53652181							2.79	0.059192565	0.46			
+254	"Pan et al.,2017"	First leaf above ear leaf	188	8	110637493	111350785				73.3-78	3.6			2.48554E-05	4.4	-1.45		
+255	"Pan et al.,2017"	First leaf above ear leaf	1887	8	130277064	130332424							3.01	0.051052101	0.47			
+256	"Pan et al.,2017"	First leaf above ear leaf	188	8	134024917	135552907				78.5-79.9	6.4			2.97596E-08	9	1.38		
+257	"Pan et al.,2017"	First leaf above ear leaf	1887	8	145395217	145536755							3.52	0.036583095	0.56			
+258	"Pan et al.,2017"	First leaf above ear leaf	1887	8	150676575	150726131							6.1	0.007649745	0.79			
+259	"Pan et al.,2017"	First leaf above ear leaf	1887	8	151007678	151161863							2.83	0.057608976	0.49			
+260	"Pan et al.,2017"	First leaf above ear leaf	188	8	152947839	153017583				92-104	3.1			8.45923E-05	3.4	-1.38		
+261	"Pan et al.,2017"	First leaf above ear leaf	1887	8	153815934	153873151							10.96	0.000502425	1.17			
+262	"Pan et al.,2017"	First leaf above ear leaf	188	8	157503617	157507989				91.6-92.8	12.7			1.07619E-14	21.3	-1.98		
+263	"Pan et al.,2017"	First leaf above ear leaf	1887	8	158518140	158542035							2.86	0.056452859	0.49			
+264	"Pan et al.,2017"	First leaf above ear leaf	1887	8	158945616	158978510							4.8	0.01651896	0.68			
+265	"Pan et al.,2017"	First leaf above ear leaf	1887	8	159579292	159705370							3.31	0.041902381	0.56			
+266	"Pan et al.,2017"	First leaf above ear leaf	188	8	159641923	159641923				96.3-101.3	14.5			1.60371E-16	23.8	-1.86		
+267	"Pan et al.,2017"	First leaf above ear leaf	1887	8	160214557	160291001							3.48	0.037536005	0.56			
+268	"Pan et al.,2017"	First leaf above ear leaf	1887	8	163278795	163292649							6.07	0.007784522	0.72			
+269	"Pan et al.,2017"	First leaf above ear leaf	1887	8	164868042	164924878							3.73	0.031996055	0.58			
+270	"Pan et al.,2017"	First leaf above ear leaf	1887	8	165138509	165145348							3.17	0.045922305	0.52			
+271	"Pan et al.,2017"	First leaf above ear leaf	1887	8	165724384	165758091							6.17	0.007344615	0.81			
+272	"Pan et al.,2017"	First leaf above ear leaf	1887	8	166341680	166374551							11.6	0.000354628	1.23			
+273	"Pan et al.,2017"	First leaf above ear leaf	188	9	11238082	11238266				19.3-27.6	3.6			2.48554E-05	6.5	-1.09		
+274	"Pan et al.,2017"	First leaf above ear leaf	188	9	24153074	24345287				47.9-53.5	3.4			4.05143E-05	5.1	0.74		
+275	"Pan et al.,2017"	First leaf above ear leaf	188	9	78707864	87043605				60.3-64.9	4.1			7.37466E-06	6	0.8		
+276	"Pan et al.,2017"	First leaf above ear leaf	188	9	108482593	109317441				67.8-71.8	3.5			3.17268E-05	5.1	0.73		
+277	"Pan et al.,2017"	First leaf above ear leaf	1887	9	139529219	139716960							3.18	0.045621365	0.46			
+278	"Pan et al.,2017"	First leaf above ear leaf	188	9	140001347	140001347				91.2-94.4	3.6			2.48554E-05	5.4	-0.7		
+279	"Pan et al.,2017"	First leaf above ear leaf	1887	9	142426013	142433076							5.24	0.012687992	0.62			
+280	"Pan et al.,2017"	First leaf above ear leaf	188	9	143202981	143207235				99.1-108.1	4.9			1.07136E-06	7.2	-0.81		
+281	"Pan et al.,2017"	First leaf above ear leaf	1887	9	143724326	143823444							2.84	0.057220643	0.41			
+282	"Pan et al.,2017"	First leaf above ear leaf	1887	9	144486813	144557184							3.25	0.043575246	0.44			
+283	"Pan et al.,2017"	First leaf above ear leaf	1887	10	8898509	9009220							3.7	0.032611022	0.51			
+284	"Pan et al.,2017"	First leaf above ear leaf	188	10	16211953	18404694				40.8-44.5	4.1			7.37466E-06	6.9	0.89		
+285	"Pan et al.,2017"	First leaf above ear leaf	188	10	80000723	81065284				49.3-53.6	4.2			5.78924E-06	5.9	0.81		
+286	"Pan et al.,2017"	First leaf above ear leaf	1887	10	80548347	80658087							6.87	0.0049049	0.83			
+287	"Pan et al.,2017"	First leaf above ear leaf	1887	10	85284640	85373557							7.3	0.003837724	0.84			
+288	"Pan et al.,2017"	First leaf above ear leaf	188	10	94982507	94982817				50.8-57.6	3.1			8.45923E-05	5.4	0.81		
+289	"Pan et al.,2017"	First leaf above ear leaf	188	10	113730242	119113276				53.6-57.9	4.6			2.20453E-06	6.6	0.85		
+290	"Pan et al.,2017"	First leaf above ear leaf	188	10	133335102	133526856				63.2-74.5	3.3			5.17582E-05	5	0.75		
+291	"Wang et al.,2017"	Ear leaf	220	1	24051133	24202730					4.31			4.43743E-06	4.61	-0.59		
+292	"Wang et al.,2017"	Ear leaf	220	1	24051133	24202730					6.94			8.25359E-09	7.42	-0.76		
+293	"Wang et al.,2017"	Ear leaf	220	1	25414526	27555829					8.3			3.30606E-10	11.64	-1.17		
+294	"Wang et al.,2017"	Ear leaf	220	2	3004689	4697715					8.03			6.25444E-10	8.85	-0.82		
+295	"Wang et al.,2017"	Ear leaf	220	2	3004689	4697715					8.45			2.32054E-10	10.96	-1.14		
+296	"Wang et al.,2017"	Ear leaf	220	2	3004689	4697715					11.15			4.05893E-13	12.5	-0.99		
+297	"Wang et al.,2017"	Ear leaf	220	2	218127545	219130520					2.77			0.000191162	3.02	-0.48		
+298	"Wang et al.,2017"	Ear leaf	220	4	82802932	83598359					3.9			1.19778E-05	4.05	-0.56		
+299	"Wang et al.,2017"	Ear leaf	220	5	29937149	32897590					5.49			2.6056E-07	5.59	0.67		
+300	"Wang et al.,2017"	Ear leaf	220	5	173209694	180787777					8.07			5.69055E-10	9.54	0.85		
+301	"Wang et al.,2017"	Ear leaf	220	5	173209694	180787777					4.76			1.49993E-06	6.54	0.88		
+302	"Wang et al.,2017"	Ear leaf	220	5	186557645	188513354					3.9			1.19778E-05	3.93	0.55		
+303	"Wang et al.,2017"	Ear leaf	220	6	161924948	163375134					3.02			0.000103019	3.33	-0.51		
+304	"Wang et al.,2017"	Ear leaf	220	7	121049064	122703734					13.72			9.91419E-16	16.53	-1.11		
+305	"Wang et al.,2017"	Ear leaf	220	7	121049064	122703734					8.81			9.92965E-11	11.62	-1.17		
+306	"Wang et al.,2017"	Ear leaf	220	7	121049064	122703734					12.4			2.17141E-14	13.84	-1.04		
+307	"Wang et al.,2017"	Ear leaf	220	10	147938674	148637945					3.23			6.14549E-05	3.6	-0.53		
+308	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	1	11109102	11109102	PZE-101019334		195.41		4.31 			4.38547E-06	9.60 	-1.30 		
+309	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	1	199666129	199666129	PZE-101156913		200.71		4.66 			1.90726E-06	10.25 	1.75 		
+310	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	1	261019048	261019048	PZE-101211251		51.51		3.97 			1.01696E-05	8.03 	1.30 		
+311	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	1	269998511	269998511	PZE-101218726		57.81		4.20 			5.73175E-06	8.49 	1.38 		
+312	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	2	178548315	178548315	SYN33470		68.11		3.68 			2.05215E-05	8.21 	-1.20 		
+313	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	3	195989508	195989508	PZE-103139795		57.41		4.39 			3.68858E-06	9.30 	1.28 		
+314	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	4	19351235	19351235	SYN1483		85.71		4.23 			5.35347E-06	8.38 	-1.47 		
+315	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	5	49832407	49832407	PZE-105053747		109.71		4.74 			1.56377E-06	8.99 	-1.35 		
+316	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	5	84170937	84170937	PZE-105076131		65.11		3.89 			1.21656E-05	7.47 	-1.16 		
+317	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	5	187134558	187134558	PZE-105130621		132.91		4.34 			4.0964E-06	9.28 	-1.71 		
+318	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	7	14378738	14378738	PZE-107016866		85.31		5.49 			2.60757E-07	11.67 	-1.47 		
+319	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	7	29547166	29547166	PZE-107026335		93.61		6.92 			8.72893E-09	14.42 	-1.60 		
+320	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	7	92968618	92968618	PZE-107045512		89.41		5.60 			1.98047E-07	12.72 	-1.51 		
+321	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	7	135853027	135853027	PZE-107080831		33.41		3.60 			2.45676E-05	8.17 	-1.36 		
+322	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	8	5894805	5894805	PUT-163a-71445680-3381		126.11		5.45 			2.89296E-07	10.81 	-1.72 		
+323	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	8	99908257	99908257	PZE-108055738		124.41		5.47 			2.71817E-07	11.61 	2.10 		
+324	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	8	148617956	148617956	PZE-108091669		121.31		6.19 			4.86694E-08	12.38 	-2.17 		
+325	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	9	67415265	67415265	PZE-109041898		22.71		3.59 			2.52268E-05	6.95 	1.52 		
+326	"Zhang et al.,2017"	Average of all leaves above ear leaf	196	10	16211953	16211953	PZE-110015978		42.61		4.74 			1.57196E-06	9.95 	-1.60 		
+327	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	1	66030259	66030259	SYN36408		141.71		6.02 			7.28566E-08	11.19 	2.40 		
+328	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	1	66301119	66301119	PZE-101120107		189.11		4.61 			2.12862E-06	9.22 	2.35 		
+329	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	1	68551660	68551660	PZE-101081454		84.91		6.39 			3.02554E-08	12.36 	2.48 		
+330	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	1	253776427	253776427	PZE-101204999		109.21		3.55 			2.77511E-05	7.26 	1.67 		
+331	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	2	3233846	3233846	PZE-102006148		119.11		6.35 			3.37217E-08	12.20 	2.33 		
+332	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	2	11957293	11957293	SYN456		124.81		3.50 			3.13504E-05	6.74 	2.05 		
+333	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	4	15850606	15850606	PZE-104016135		85.51		4.66 			1.89732E-06	8.84 	1.85 		
+334	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	4	210130144	210130144	PZE-104129370		99.41		3.87 			1.28245E-05	7.79 	1.66 		
+335	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	5	9921515	9921515	SYN37836		184.91		5.47 			2.70409E-07	11.21 	2.19 		
+336	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	5	172960080	172960080	PZE-105115904		80.21		4.14 			6.64028E-06	7.67 	-2.02 		
+337	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	5	186785855	186785855	PZE-105129571		142.41		4.13 			6.88918E-06	7.65 	-1.98 		
+338	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	5	190798875	190798875	SYN38257		81.21		3.54 			2.88002E-05	6.62 	-1.85 		
+339	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	5	215390736	215390736	PZE-105179860		76.11		3.93 			1.10642E-05	8.62 	2.68 		
+340	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	7	122370336	122370336	SYN21763		81.21		3.89 			1.23596E-05	8.30 	-1.94 		
+341	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	7	124183277	124183277	PZE-107067315		48.51		5.66 			1.73059E-07	10.89 	-2.08 		
+342	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	7	128179229	128179229	PZE-107072028		9.41		3.95 			1.04962E-05	7.99 	-1.76 		
+343	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	7	129896750	129896750	PZE-107073339		13.21		4.29 			4.67047E-06	9.11 	-2.03 		
+344	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	7	131684633	131684633	ZM012706-0416		81.21		4.64 			2.02017E-06	9.03 	-1.90 		
+345	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	8	75119563	75119563	PZE-108045794		86.41		3.92 			1.14197E-05	7.99 	1.66 		
+346	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	8	75119563	75119563	PZE-108045794		53.61		6.47 			2.5384E-08	12.42 	2.39 		
+347	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	8	166475958	166475958	PZE-108118035		77.01		4.98 			8.8545E-07	11.55 	3.93 		
+348	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	9	4507165	4507165	PZE-109004022		85.51		4.38 			3.70796E-06	8.94 	-1.97 		
+349	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	10	77119274	77119274	SYN18004		53.41		5.08 			6.89521E-07	9.97 	-2.46 		
+350	"Zhang et al.,2017"	Average of all leaves below ear leaf	196	10	142499242	142499242	PUT-163a-28986412-1715		46.01		3.82 			1.4633E-05	8.10 	2.16 		
+351	"Zhang et al.,2017"	Average of all leaves in canopy	196	1	21982917	21982917	SYN430		54.81		3.60 			2.50936E-05	7.84 	1.27 		
+352	"Zhang et al.,2017"	Average of all leaves in canopy	196	1	68551660	68551660	PZE-101081454		86.01		4.05 			8.41353E-06	8.03 	1.22 		
+353	"Zhang et al.,2017"	Average of all leaves in canopy	196	1	230263475	230263475	PZE-101185524		161.11		3.64 			2.28124E-05	6.85 	1.28 		
+354	"Zhang et al.,2017"	Average of all leaves in canopy	196	1	243079156	243079156	PZE-101195565		173.31		3.93 			1.10642E-05	8.27 	1.23 		
+355	"Zhang et al.,2017"	Average of all leaves in canopy	196	1	243713365	243713365	PZE-101195985		174.61		5.74 			1.45087E-07	11.36 	1.47 		
+356	"Zhang et al.,2017"	Average of all leaves in canopy	196	2	3233846	3233846	PZE-102006148		13.41		5.08 			6.96741E-07	10.29 	1.50 		
+357	"Zhang et al.,2017"	Average of all leaves in canopy	196	2	13307850	13307850	PZE-102028305		56.61		3.86 			1.33069E-05	8.53 	1.34 		
+358	"Zhang et al.,2017"	Average of all leaves in canopy	196	2	15144581	15144581	SYN3308		62.61		4.34 			4.11793E-06	9.54 	1.53 		
+359	"Zhang et al.,2017"	Average of all leaves in canopy	196	2	192025993	192025993	PZE-102144397		143.91		3.81 			1.49453E-05	7.68 	-1.52 		
+360	"Zhang et al.,2017"	Average of all leaves in canopy	196	2	197033733	197033733	PZE-102149656		148.51		4.32 			4.31699E-06	9.70 	-2.05 		
+361	"Zhang et al.,2017"	Average of all leaves in canopy	196	2	203299494	203299494	SYN30953		151.41		6.04 			7.06293E-08	11.81 	-2.06 		
+362	"Zhang et al.,2017"	Average of all leaves in canopy	196	3	10328492	10328492	PZE-103017663		43.01		4.77 			1.45351E-06	9.17 	1.43 		
+363	"Zhang et al.,2017"	Average of all leaves in canopy	196	4	188803390	188803390	SYN25813		132.71		3.91 			1.17867E-05	8.14 	1.22 		
+364	"Zhang et al.,2017"	Average of all leaves in canopy	196	4	191945394	191945394	PHM4348.16		137.81		4.20 			5.73175E-06	8.75 	1.27 		
+365	"Zhang et al.,2017"	Average of all leaves in canopy	196	5	30318687	30318687	SYN37044		78.11		3.88 			1.24249E-05	7.43 	-1.34 		
+366	"Zhang et al.,2017"	Average of all leaves in canopy	196	5	172960080	172960080	PZE-105115904		109.21		4.63 			2.05211E-06	9.22 	-1.32 		
+367	"Zhang et al.,2017"	Average of all leaves in canopy	196	5	215673520	215673520	SYN33328		191.51		3.58 			2.61798E-05	7.66 	1.30 		
+368	"Zhang et al.,2017"	Average of all leaves in canopy	196	7	130289463	130289463	PZE-107074405		83.21		4.43 			3.28689E-06	9.33 	-1.14 		
+369	"Zhang et al.,2017"	Average of all leaves in canopy	196	8	74180042	74180042	SYN12096		78.21		3.76 			1.66982E-05	7.96 	1.33 		
+370	"Zhang et al.,2017"	Average of all leaves in canopy	196	8	150847147	150847147	PZE-108094801		112.41		3.61 			2.43087E-05	7.83 	1.17 		
+371	"Zhang et al.,2017"	Average of all leaves in canopy	196	8	166131256	166131256	PZE-108116973		141.21		5.66 			1.74863E-07	11.47 	2.09 		
+372	"Zhang et al.,2017"	Average of all leaves in canopy	196	10	5485252	5485252	PZE-110007091		24.11		4.16 			6.36685E-06	7.87 	-1.34 		
+373	"Zhang et al.,2017"	Average of all leaves in canopy	196	10	77119274	77119274	SYN18004		45.41		4.84 			1.22349E-06	10.01 	-1.89 		
+374	"Zhang et al.,2017"	Average of all leaves in canopy	196	10	144825247	144825247	PZE-110102178		110.51		5.68 			1.64313E-07	11.87 	1.39 		
+375	"Dzievit et al.,2017"	Second leaf below ear leaf	125	1	276273488	276767264			105		3.7557			1.70099E-05	12.5745	4.2178		-0.6257
+376	"Dzievit et al.,2017"	Second leaf below ear leaf	125	1	277058353	277703106			105.35		5			8.42674E-07	15.4274	4.0754		-1.5369
+377	"Dzievit et al.,2017"	Second leaf below ear leaf	125	1	277058353	277703106			105.35		4.0495			8.33445E-06	13.9954	3.4897		0.8499
+378	"Dzievit et al.,2017"	Second leaf below ear leaf	125	2	213198332	213210564			89		4.3427			4.1004E-06	12.744	-2.999		0.2376
+379	"Dzievit et al.,2017"	Second leaf below ear leaf	125	3	28619045	53980490			41.18		7.3904			2.83854E-09	24.3218	5.4596		-0.1162
+380	"Dzievit et al.,2017"	Second leaf below ear leaf	125	3	159762871	176494521			59		3.2306			6.13644E-05	9.3635	2.3339		-1.1406
+381	"Dzievit et al.,2017"	Second leaf below ear leaf	125	3	176494521	181871533			65		3.4241			3.81946E-05	11.4203	4.6749		-0.9472
+382	"Dzievit et al.,2017"	Second leaf below ear leaf	125	3	229674513	229829589			122		4.1526			6.49282E-06	11.4875	-2.8866		1.9547
+383	"Dzievit et al.,2017"	Second leaf below ear leaf	125	4	187592869	188385221			46.02		4.3259			4.27021E-06	15.2459	4.8252		-1.9039
+384	"Dzievit et al.,2017"	Second leaf below ear leaf	125	8	145717043	159253272			37		3.1687			7.14411E-05	9.3359	2.0333		4.2004
