@@ -1,14 +1,14 @@
-##**Dissection of leaf angle variation in maize through genetic mapping and meta-analysis**
+## **Dissection of leaf angle variation in maize through genetic mapping and meta-analysis**
 
 Matthew J. Dzievit, Xianran Li, Jianming Yu
 
 
-###Folder organization
+### Folder organization
 1. Filter - it contains the java scripts for filtering the data
 2. Imputation - it contains the sliding window script
 3. Other - it contains a text file of SNP types that came from the metadata from Cornell
 
-###Genotypic data information
+### Genotypic data information
 
 The raw genotypic data is located here:
 
@@ -18,7 +18,7 @@ Descriptions of genotypic file
 
 2. SNPs are numbered by position only from chr1 - chr10. So pos 1....pos 1,000,000 then starts over to pos 2 ..... 2,000,000. This is first chr1 and then chr2, etc. The true raw data includes SNPs that did not map to a chromosome, but those were removed immediately.
 
-###Pipeline for generating SNPs
+### Pipeline for generating SNPs
 Please note: java scripts were run inside eclipse and you should change the file location of the files (and possible the name) inside the code. I did not optimize the code to run with inputting a path and filename, etc.
 
 

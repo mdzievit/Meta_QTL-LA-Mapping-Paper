@@ -1,4 +1,4 @@
-##**Dissection of leaf angle variation in maize through genetic mapping and meta-analysis**
+## **Dissection of leaf angle variation in maize through genetic mapping and meta-analysis**
 
 Matthew J. Dzievit, Xianran Li, Jianming Yu
 
@@ -9,7 +9,7 @@ The folder "Raw\_Data" contains the raw data files presented in the supplemental
 
 2. Text file named "Candidate\_Genes\_Used\_In\_Paper.txt" contains all the information about the candidate genes that was compiled
 
-###Meta-analysis code and files
+### Meta-analysis code and files
 
 **In the main folder **
 

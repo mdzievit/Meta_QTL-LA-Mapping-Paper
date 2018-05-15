@@ -1,4 +1,4 @@
-##**Dissection of leaf angle variation in maize through genetic mapping and meta-analysis**
+## **Dissection of leaf angle variation in maize through genetic mapping and meta-analysis**
 
 Matthew J. Dzievit, Xianran Li, Jianming Yu
 
