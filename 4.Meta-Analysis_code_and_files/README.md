@@ -11,7 +11,7 @@ The folder "Raw\_Data" contains the raw data files presented in the supplemental
 
 ### Meta-analysis code and files
 
-**In the main folder **
+**In the main folder**
 
 1. The file named "snps\_pvalues_v3.txt" and "Candidate\_Genes\_v3.txt" was used in the R script named "Meta\_Analysis.R". Please refer to the comments within this script for what it does and the files that it writes. All analysis related to the meta-analysis was done with this script and also it generated all figures related to the meta-analysis.
 

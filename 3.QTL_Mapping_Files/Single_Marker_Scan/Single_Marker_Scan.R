@@ -7,7 +7,8 @@ print(sessionInfo())
 
 ##Read coded SNP data in before it sliding window
 data <- read_tsv("B73-Genotypes.txt",
-                 col_names = FALSE) %>%
+                 col_names = FALSE,
+                 na = "N") %>%
   t()
 colnames(data) <- data[1,]
 data <- data[-1,]
@@ -34,7 +35,7 @@ for (i in 4:ncol(data) )
   
   test = aov(data$F3_MLA ~ data[,i])
   holder = summary(test)[[1]][["Pr(>F)"]]
-  f3_pvalues[i-3] = holder[1]
+  f3_pvalues[i - 3] = holder[1]
   
 }
 
@@ -51,7 +52,8 @@ manhattan(snps_f2_b73)
 
 ##Read coded SNP data in before it sliding window
 data <- read_tsv("Mo17-Genotypes.txt",
-                 col_names = FALSE) %>%
+                 col_names = FALSE,
+                 na = "N") %>%
   t()
 colnames(data) <- data[1,]
 data <- data[-1,]

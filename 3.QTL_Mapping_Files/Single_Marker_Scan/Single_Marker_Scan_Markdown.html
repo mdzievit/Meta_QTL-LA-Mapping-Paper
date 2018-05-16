@@ -158,7 +158,7 @@ $(document).ready(function () {
 ## [9] tidyverse_1.2.1
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_0.12.15     cellranger_1.1.0 pillar_1.1.0     compiler_3.4.2  
+##  [1] Rcpp_0.12.13     cellranger_1.1.0 pillar_1.1.0     compiler_3.4.2  
 ##  [5] plyr_1.8.4       bindr_0.1        tools_3.4.2      digest_0.6.12   
 ##  [9] lubridate_1.7.1  jsonlite_1.5     evaluate_0.10.1  nlme_3.1-131    
 ## [13] gtable_0.2.0     lattice_0.20-35  pkgconfig_2.0.1  rlang_0.1.6     
@@ -175,7 +175,8 @@ $(document).ready(function () {
 
 ##Read coded SNP data in before implementing the sliding window
 data &lt;- read_tsv(&quot;B73-Genotypes.txt&quot;,
-                 col_names = FALSE) %&gt;%
+                 col_names = FALSE,
+                 na = &quot;N&quot;) %&gt;%
   t()</code></pre>
 <pre><code>## Parsed with column specification:
 ## cols(
@@ -234,7 +235,8 @@ colnames(snps_f3_b73)[4] = &quot;P&quot;
 
 ##Read coded SNP data in before implementing the sliding window
 data &lt;- read_tsv(&quot;Mo17-Genotypes.txt&quot;,
-                 col_names = FALSE) %&gt;%
+                 col_names = FALSE,
+                 na = &quot;N&quot;) %&gt;%
   t()</code></pre>
 <pre><code>## Parsed with column specification:
 ## cols(
@@ -290,18 +292,18 @@ colnames(snps_f3_mo17)[4] = &quot;P&quot;
 
 ##Output the datafiles
 
-# write_tsv(snps_f2_b73 %&gt;%
-#             rename(F2 = P) %&gt;%
-#             left_join(snps_f3_b73 %&gt;%
-#                         rename(F3 = P),
-#                       by = c(&quot;SNP&quot;,&quot;CHR&quot;,&quot;BP&quot;)),
-#           path = &quot;pvalues_B73.txt&quot;)
-# write_tsv(snps_f2_mo17 %&gt;%
-#             rename(F2 = P) %&gt;%
-#             left_join(snps_f3_mo17 %&gt;%
-#                         rename(F3 = P),
-#                       by = c(&quot;SNP&quot;,&quot;CHR&quot;,&quot;BP&quot;)),
-#           path = &quot;pvalues_Mo17.txt&quot;)</code></pre>
+write_tsv(snps_f2_b73 %&gt;%
+            rename(F2 = P) %&gt;%
+            left_join(snps_f3_b73 %&gt;%
+                        rename(F3 = P),
+                      by = c(&quot;SNP&quot;,&quot;CHR&quot;,&quot;BP&quot;)),
+          path = &quot;pvalues_B73.txt&quot;)
+write_tsv(snps_f2_mo17 %&gt;%
+            rename(F2 = P) %&gt;%
+            left_join(snps_f3_mo17 %&gt;%
+                        rename(F3 = P),
+                      by = c(&quot;SNP&quot;,&quot;CHR&quot;,&quot;BP&quot;)),
+          path = &quot;pvalues_Mo17.txt&quot;)</code></pre>
 
 
 

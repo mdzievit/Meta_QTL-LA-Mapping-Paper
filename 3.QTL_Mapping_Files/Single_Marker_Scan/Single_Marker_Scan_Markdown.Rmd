@@ -18,7 +18,8 @@ print(sessionInfo())
 
 ##Read coded SNP data in before implementing the sliding window
 data <- read_tsv("B73-Genotypes.txt",
-                 col_names = FALSE) %>%
+                 col_names = FALSE,
+                 na = "N") %>%
   t()
 colnames(data) <- data[1,]
 data <- data[-1,]
@@ -62,7 +63,8 @@ colnames(snps_f3_b73)[4] = "P"
 
 ##Read coded SNP data in before implementing the sliding window
 data <- read_tsv("Mo17-Genotypes.txt",
-                 col_names = FALSE) %>%
+                 col_names = FALSE,
+                 na = "N") %>%
   t()
 colnames(data) <- data[1,]
 data <- data[-1,]
@@ -103,17 +105,17 @@ colnames(snps_f3_mo17)[4] = "P"
 
 ##Output the datafiles
 
-# write_tsv(snps_f2_b73 %>%
-#             rename(F2 = P) %>%
-#             left_join(snps_f3_b73 %>%
-#                         rename(F3 = P),
-#                       by = c("SNP","CHR","BP")),
-#           path = "pvalues_B73.txt")
-# write_tsv(snps_f2_mo17 %>%
-#             rename(F2 = P) %>%
-#             left_join(snps_f3_mo17 %>%
-#                         rename(F3 = P),
-#                       by = c("SNP","CHR","BP")),
-#           path = "pvalues_Mo17.txt")
+write_tsv(snps_f2_b73 %>%
+            rename(F2 = P) %>%
+            left_join(snps_f3_b73 %>%
+                        rename(F3 = P),
+                      by = c("SNP","CHR","BP")),
+          path = "pvalues_B73.txt")
+write_tsv(snps_f2_mo17 %>%
+            rename(F2 = P) %>%
+            left_join(snps_f3_mo17 %>%
+                        rename(F3 = P),
+                      by = c("SNP","CHR","BP")),
+          path = "pvalues_Mo17.txt")
 ```
 
