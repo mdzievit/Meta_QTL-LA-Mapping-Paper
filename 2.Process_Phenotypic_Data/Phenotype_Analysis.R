@@ -44,23 +44,10 @@ data_summary_F1_Parents <- data_formatted %>%
             Min = min(LA,na.rm = TRUE),
             Max = max(LA, na.rm = TRUE))
 
-##Summarize the selected groups (Upright, Average, and Flat)
-data_summary_groups <- data_formatted %>%
-  filter(!Population %in% c("F1","Parent"),
-         Selected == "Yes") %>%
-  group_by(Type,Group) %>%
-  summarise(Avg = mean(LA, na.rm = TRUE),
-            SD = sqrt(var(LA,na.rm = TRUE)),
-            n = n(),
-            Min = min(LA,na.rm = TRUE),
-            Max = max(LA,na.rm = TRUE))
-
-##Write these summaries to text files
+# #Write these summaries to text files
 # write_delim(data_summary_pops, "F2_Population_Summary.txt",
 #             delim = "\t")
 # write_delim(data_summary_F1_Parents, "Parents_F1_Summary.txt",
-#             delim = "\t")
-# write_delim(data_summary_groups, "Groups_Summary.txt",
 #             delim = "\t")
 # write_delim(data_summary_combined_pops, "Combined_Groups_Summary.txt",
 #             delim = "\t")
@@ -74,7 +61,7 @@ f2_hist <- data_formatted %>%
     ggplot() +
     geom_histogram(aes(LA, ..density..), binwidth = 5) +
     facet_wrap(~ Population + Generation,
-               nrow = 2,
+               nrow = 1,
                labeller = label_parsed) +
     theme_bw() +
     xlab("Leaf Angle (Degrees)") +
@@ -112,6 +99,17 @@ f3_pop_summary <- f3_data %>%
             n = n(),
             Min = min(F3,na.rm = TRUE),
             Max = max(F3, na.rm = TRUE))
+
+##Summarizes the F2 groups, that made it to next generation combined population
+f3_pop_group <- f3_data %>%
+  select(Genotype,Type,Population,Group,F2) %>%
+  na.omit() %>%
+  group_by(Type,Group) %>%
+  summarise(Avg = mean(F2,na.rm = TRUE),
+            SD = sqrt(var(F2,na.rm = TRUE)),
+            n = n(),
+            Min = min(F2,na.rm = TRUE),
+            Max = max(F2, na.rm = TRUE))
 
 ##Test if there are any significant difference between hybrids
 data_f1_test <- data_formatted %>%
@@ -173,20 +171,12 @@ f3_hist <- f3_data %>%
   ggplot() +
   geom_histogram(aes(LA, ..density..), binwidth = 5) +
   facet_wrap(~ Population + Generation,
-             nrow = 2,
+             nrow = 1,
              labeller = label_parsed) +
   theme_bw() +
   xlab("Leaf Angle (Degrees)") +
   scale_x_continuous(limits = c(40,80), breaks = seq(40,80,5)) +
   scale_y_continuous(limits = c(0,0.09)) +
-  geom_point(data = parental_data_formatted_f3,
-             aes(x = Avg),
-             y = 0.075,
-             size = 2) +
-  geom_text(data = parental_data_formatted_f3,
-             aes(x = Avg, y = 0.0875, label = Genotype),
-             size = 2,
-             fontface = "bold") +
   theme(strip.text.x = element_text(size = 6,
                                     margin = margin(.15,0,.1,0,"cm")),
         strip.background = element_rect(colour = "black", fill = NA))
@@ -206,10 +196,25 @@ f2_hist_parents <- f2_hist +
     theme(strip.text.x = element_text(size = 6,
                                       margin = margin(.15,0,.1,0,"cm")),
           strip.background = element_rect(colour = "black", fill = NA))
-plot_grid(f2_hist_parents, f3_hist, align = "v")
+plot_grid(f2_hist_parents, f3_hist, nrow = 2)
 
-# save_plot("Phenotype_Analysis/phenotypic_histogram.pdf",
+# save_plot("phenotypic_histogram3.png",
 #           base_height = 4, base_width = 7,
-#           plot_grid(f2_hist_parents, f3_hist, align = "v"),
+#           plot_grid(f2_hist_parents, f3_hist, nrow = 2),
 #           base_aspect_ratio = .6
 #           )
+
+f3_hist <- f3_data %>%
+  select(-F3) %>%
+  rename(LA = F2) %>%
+  mutate(Type = ifelse(Population %in% c("B73/PHW30","PHW30/B73"),"B73~Population",
+                       ifelse(Population %in% c("Mo17/PHW30","PHW30/Mo17"),"Mo17~Population",
+                              Population)),
+         Generation = 'Generation:F[2]') %>%
+  select(-Population) %>%
+  rename(Population = Type) %>%
+  ggplot() +
+  geom_histogram(aes(LA, ..density..), binwidth = 5) +
+  facet_wrap(~ Population + Generation,
+             nrow = 1,
+             labeller = label_parsed)

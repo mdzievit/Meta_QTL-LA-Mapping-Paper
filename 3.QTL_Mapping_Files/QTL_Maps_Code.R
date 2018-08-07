@@ -8,7 +8,8 @@ library(gridExtra)
 ###Compiled the LOD score outputs from IcIM software into one file to create 
 ###the QTL maps (for plotting figure 2)
 ##Input the data
-data <- read_tsv(file = "All_Results.txt")
+data <- read_tsv(file = "All_Results.txt") %>% 
+  mutate(Color = Chromosome %% 2)
 
 ##This is pulling out the chromosomes where there is at least one significant QTL
 ##across all the data.
@@ -177,13 +178,18 @@ LOD_plotter <- function(data,Pop,Trait, midpoints) {
                linetype = "dotted",
                size = 1,
                color = "light gray") +
-    geom_line(aes(x = Order, y = LOD, group = Chromosome),
-              size = .75) +
+    geom_line(aes(x = Order, 
+                  y = LOD, 
+                  group = Chromosome, 
+                  color = factor(Color)),
+              size = .75,
+              show.legend = FALSE) +
     xlab("Chromosome") +
     scale_x_continuous(labels = c(1:10),
                        breaks = midpoints %>%
                          pull(Break),
                        expand = c(0.025,0)) +
+    scale_color_manual(values = c("black","blue")) +
     theme(text = element_text(size = 8),
           axis.text = element_text(size = 8))
 }
@@ -274,7 +280,7 @@ manhattan_plotter <- function(data,Pop,Trait, midpoints) {
                        breaks = midpoints %>%
                          pull(Break),
                        expand = c(0.025,0)) +
-    scale_color_manual(values = c("gray10","gray60")) +
+    scale_color_manual(values = c("black","blue")) +
     theme(text = element_text(size = 8),
           axis.text = element_text(size = 8))
 }
@@ -357,10 +363,10 @@ allPlots_man_Mo17 <- plot_grid(plot3,
 plot_grid(allPlots_man_B73,
           allPlots_man_Mo17,
           ncol = 1)
-# ggsave(filename = "Combined_ComparisonFigure_Supplemental.png",
-#        plot = plot_grid(allPlots_man_B73,
-#                         allPlots_man_Mo17,
-#                         ncol = 1),
-#        dpi = 600,
-#        width = 7,
-#        height = 9)
+ggsave(filename = "Combined_ComparisonFigure_Supplemental_color.pdf",
+       plot = plot_grid(allPlots_man_B73,
+                        allPlots_man_Mo17,
+                        ncol = 1),
+       dpi = 600,
+       width = 7,
+       height = 9)
