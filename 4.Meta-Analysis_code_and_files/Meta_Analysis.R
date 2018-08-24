@@ -1,8 +1,10 @@
-library(sensitivitymv)
 library(tidyverse)
-library(survcomp)
 library(grid)
 library(gridExtra)
+source("https://bioconductor.org/biocLite.R")
+biocLite()
+biocLite("survcomp")
+library(survcomp)
 ##Analysis done with RefGen V3
 
 print(sessionInfo())
